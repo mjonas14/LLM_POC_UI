@@ -1,10 +1,10 @@
 // TODO: change this to your real backend URL
 // const API_URL = "http://localhost:8000/chat"; // or your tunnel / LAN URL
 
-let API_URL = localStorage.getItem('apiUrl') || 'http://1.1.1.1:8000/chat';
+let API_URL = localStorage.getItem('apiUrl') || 'http://0.0.0.0:8000/chat';
 
 function saveApiUrl() {
-  IP_Address = document.getElementById('api-url').value;
+  const IP_Address = document.getElementById('api-url').value;
   API_URL = `http://${IP_Address}:8000/chat`
   localStorage.setItem('apiUrl', API_URL);
 }
