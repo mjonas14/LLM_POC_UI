@@ -4,7 +4,8 @@
 let API_URL = localStorage.getItem('apiUrl') || 'http://1.1.1.1:8000/chat';
 
 function saveApiUrl() {
-  API_URL = document.getElementById('api-url').value;
+  IP_Address = document.getElementById('api-url').value;
+  API_URL = `http://${IP_Address}:8000/chat`
   localStorage.setItem('apiUrl', API_URL);
 }
 
