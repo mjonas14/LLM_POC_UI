@@ -1,5 +1,12 @@
 // TODO: change this to your real backend URL
-const API_URL = "http://localhost:8000/chat"; // or your tunnel / LAN URL
+// const API_URL = "http://localhost:8000/chat"; // or your tunnel / LAN URL
+
+let API_URL = localStorage.getItem('apiUrl') || 'http://1.1.1.1:8000/chat';
+
+function saveApiUrl() {
+  API_URL = document.getElementById('api-url').value;
+  localStorage.setItem('apiUrl', API_URL);
+}
 
 const form = document.getElementById("chat-form");
 const input = document.getElementById("chat-input");

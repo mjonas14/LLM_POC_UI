@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Index Chat</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <title>Index Chat</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <div class="app">
-    <h1>Index Chat</h1>
+    <div class="app">
+        <h1>Index Chat</h1>
 
-    <div id="chat-window"></div>
+        <div id="config" style="margin-bottom: 16px;">
+            <label>Backend URL: <input id="api-url" value="http://0.0.0.0:8000/chat" size="40"></label>
+            <button onclick="saveApiUrl()">Save</button>
+        </div>
 
-    <form id="chat-form">
-      <input
-        id="chat-input"
-        type="text"
-        placeholder="Type a message..."
-        autocomplete="off"
-        required
-      />
-      <button type="submit">Send</button>
-    </form>
-  </div>
+        <div id="chat-window"></div>
 
-  <script src="script.js"></script>
+        <form id="chat-form">
+            <input id="chat-input" type="text" placeholder="Type a message..." autocomplete="off" required />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
